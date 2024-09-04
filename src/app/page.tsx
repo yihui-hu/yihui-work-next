@@ -1,95 +1,52 @@
+"use client";
+
+import "../app/styles/globals.css";
+import "../app/styles/home.css";
 import Image from "next/image";
-import styles from "./page.module.css";
+import workImages from "./data/workImages";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  const [screen, setScreen] = useState<Window | undefined>(undefined);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    setScreen(window);
+    setLoading(false);
+  }, []);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div className="container">
+      {!loading
+        ? workImages.map((item, index) => {
+            if (screen === undefined) {
+              return null;
+            }
+            const randomX =
+              Math.random() * (100 - (item.width / screen.innerWidth) * 100);
+            const randomY =
+              Math.random() * (100 - (item.height / screen.innerHeight) * 100);
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            return (
+              <motion.div drag dragMomentum={false} style={{ cursor: "grab" }}>
+                <Image
+                  src={item.url}
+                  alt={item.url}
+                  key={item.url}
+                  width={item.width}
+                  height={item.height}
+                  className={`image-${index}`}
+                  draggable={false}
+                  style={{
+                    left: `${randomX}vw`,
+                    top: `${randomY}vh`,
+                  }}
+                />
+              </motion.div>
+            );
+          })
+        : null}
+    </div>
   );
 }
