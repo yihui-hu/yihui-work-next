@@ -41,6 +41,7 @@ export default function Home() {
                     left: `${randomX}vw`,
                     top: `${randomY}vh`,
                   }}
+                  priority={true}
                 />
               </motion.div>
             );
