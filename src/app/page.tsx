@@ -29,11 +29,10 @@ export default function Home() {
               Math.random() * (100 - (item.height / screen.innerHeight) * 100);
 
             return (
-              <motion.div drag dragMomentum={false} style={{ cursor: "grab" }}>
+              <motion.div drag dragMomentum={false} style={{ cursor: "grab" }} key={item.url}>
                 <Image
                   src={item.url}
                   alt={item.url}
-                  key={item.url}
                   width={item.width}
                   height={item.height}
                   className={`image-${index}`}
