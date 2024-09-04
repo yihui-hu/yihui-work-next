@@ -32,8 +32,8 @@ const workImages: WorkImageData[] = [
     url: "https://yihui-work.s3.us-east-2.amazonaws.com/20XX_poster.webp",
     id: "20XX",
     category: "art design",
-    width: 412 / 1.2,
-    height: 412 / 1.2
+    width: 412 / 1.4,
+    height: 412 / 1.4
   },
   {
     url: "https://yihui-work.s3.us-east-2.amazonaws.com/arith_desktop.webp",
