@@ -6,6 +6,7 @@ import Image from "next/image";
 import workImages from "./data/workImages";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { browserName } from "react-device-detect";
 
 export default function Home() {
   const [screen, setScreen] = useState<Window | undefined>(undefined);
@@ -40,6 +41,7 @@ export default function Home() {
                   style={{
                     left: `${randomX}vw`,
                     top: `${randomY}vh`,
+                    pointerEvents: `${browserName === "Safari" ? "none" : "auto"}`
                   }}
                   priority={true}
                 />
