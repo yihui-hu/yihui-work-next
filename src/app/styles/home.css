@@ -40,6 +40,51 @@
   text-decoration: none;
 }
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.disc {
+  animation: spin 20s linear infinite; 
+  text-decoration: none;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  outline-offset: -1px;
+  border-radius: 50%;
+}
+
+.image-container {
+  position: relative;
+}
+
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.currently-img {
+  border: 4px solid white;
+  transform: rotate(-4deg);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.link {
+  text-decoration: none;
+  transition: 0.1s ease;
+  color: inherit;
+}
+
+.link:hover {
+  background-color: black;
+  color: white;
+}
+
 /* Styles for animating each card */
 
 @keyframes toss-0 {
