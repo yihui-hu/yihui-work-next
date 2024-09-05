@@ -9,7 +9,7 @@ interface WorkImageData {
 const workImages: WorkImageData[] = [
   {
     url: "https://yihui-work.s3.us-east-2.amazonaws.com/typo_super_bubble.png",
-    id: "s-b",
+    id: "super bubble",
     category: "code design",
     width: 411 / 1.8,
     height: 665 / 1.8
@@ -37,14 +37,14 @@ const workImages: WorkImageData[] = [
   },
   {
     url: "https://yihui-work.s3.us-east-2.amazonaws.com/arith_desktop.webp",
-    id: "arith",
+    id: "arith.js",
     category: "code",
     width: 412,
     height: 254,
   },
   {
     url: "https://yihui-work.s3.us-east-2.amazonaws.com/everyday_trash.webp",
-    id: "everyday__",
+    id: "everyday____",
     category: "art",
     width: 412,
     height: 274,
@@ -58,21 +58,21 @@ const workImages: WorkImageData[] = [
   },
   {
     url: "https://yihui-work.s3.us-east-2.amazonaws.com/figma_plugin.webp",
-    id: "f-c-d",
+    id: "figma competitive designing",
     category: "code design",
     width: 412 / 1.5,
     height: 583 / 1.5
   },
   {
     url: "https://yihui-work.s3.us-east-2.amazonaws.com/goodreads_overview.webp",
-    id: "goodreads",
+    id: "goodreads redesign",
     category: "design",
     width: 412,
     height: 257
   },
   {
     url: "https://yihui-work.s3.us-east-2.amazonaws.com/graphite_allegory.webp",
-    id: "g-r",
+    id: "graphite reproductions",
     category: "art",
     width: 412 / 1.5,
     height: 586 / 1.5
@@ -107,7 +107,7 @@ const workImages: WorkImageData[] = [
   },
   {
     url: "https://yihui-work.s3.us-east-2.amazonaws.com/s-i-l_grid.webp",
-    id: "s-i-l",
+    id: "sites-i-like",
     category: "code",
     width: 412,
     height: 254
