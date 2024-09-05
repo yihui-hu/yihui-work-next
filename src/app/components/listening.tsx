@@ -19,22 +19,23 @@ export default function Listening() {
       const cachedTime = localStorage.getItem("listeningToCacheTimestamp");
 
       if (isCached && cachedTime) {
-        const image = localStorage.getItem("listeningToImage")!;
-        const link = localStorage.getItem("listeningToLink")!;
-        const title = localStorage.getItem("listeningToTitle")!;
-        const artist = localStorage.getItem("listeningToArtist")!;
-        // const listening = localStorage.getItem("listeningToListening")!;
-
-        setImg(image);
-        setArtist(artist);
-        setSong(title);
-        setSrc(link);
-
         const currentTime = new Date().getTime();
         const twoMinutes = 2 * 60 * 1000;
 
         if (currentTime - parseInt(cachedTime) > twoMinutes) {
           console.log("Refresh cache");
+        } else {
+          const image = localStorage.getItem("listeningToImage")!;
+          const link = localStorage.getItem("listeningToLink")!;
+          const title = localStorage.getItem("listeningToTitle")!;
+          const artist = localStorage.getItem("listeningToArtist")!;
+          // const listening = localStorage.getItem("listeningToListening")!;
+
+          setImg(image);
+          setArtist(artist);
+          setSong(title);
+          setSrc(link);
+          return;
         }
       }
 
