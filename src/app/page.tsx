@@ -2,7 +2,7 @@
 
 import "../app/styles/globals.css";
 import "../app/styles/home.css";
-import Header from "./components/header";
+import Header from "./components/Header";
 import Footer from "./components/footer";
 import Cards from "./components/cards";
 
