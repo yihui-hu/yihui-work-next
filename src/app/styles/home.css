@@ -39,21 +39,33 @@
   text-decoration: none;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+@keyframes rotate {
+  to {
+    rotate: 1turn;
   }
 }
 
+/*
+
+Rotate disc for listening section,
+h.t. to https://css-tip.com/accelerate-rotation/
+
+*/
+
 .disc {
-  animation: spin 20s linear infinite;
+  --_a: rotate 10s linear infinite;
+  animation: var(--_a), var(--_a) paused;
+  animation-composition: add;
+
   text-decoration: none;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   outline-offset: -1px;
   border-radius: 50%;
+  transition: transform 2s ease-in-out;
+}
+
+.disc:hover {
+  animation-play-state: running;
 }
 
 .image-container {
