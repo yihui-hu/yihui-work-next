@@ -89,13 +89,13 @@ export default function Listening() {
   return (
     <div
       className="image-container"
-      style={{ width: isMobile ? 80 : 95, height: isMobile ? 80 : 95 }}
+      style={{ width: isMobile ? 72 : 95, height: isMobile ? 72 : 95 }}
     >
       <a href={src}>
         <Image
           src={img}
-          width={isMobile ? 80 : 95}
-          height={isMobile ? 80 : 95}
+          width={isMobile ? 72 : 95}
+          height={isMobile ? 72 : 95}
           alt={`${song} by ${artist}`}
           className="disc"
           draggable="false"

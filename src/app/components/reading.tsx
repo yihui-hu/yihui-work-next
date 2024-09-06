@@ -28,8 +28,8 @@ export default function Reading() {
         <Image
           className="book"
           src="https://m.media-amazon.com/images/I/61rS4ktR59L._AC_UF1000,1000_QL80_.jpg"
-          width={isMobile ? 60 : 80}
-          height={isMobile ? 90 : 120}
+          width={isMobile ? 54 : 80}
+          height={isMobile ? 81 : 120}
           alt="A New Program for Graphic Design by David Reinfurt"
           priority={true}
           style={{ userSelect: "none" }}
