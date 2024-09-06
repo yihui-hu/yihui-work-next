@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
+import { Roboto_Mono } from 'next/font/google'
 import "../app/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   description: "Portfolio of Yihui Hu",
 };
 
-const commitMono = localFont({
-  src: './CommitMono-450-Regular.otf',
-  display: 'swap',
+const roboto = Roboto_Mono({
+  weight: '400',
+  subsets: ['latin'],
 })
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={commitMono.className}>
+    <html lang="en" className={roboto.className}>
       <body>{children}</body>
     </html>
   );

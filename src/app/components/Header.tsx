@@ -15,7 +15,11 @@ export default function Header() {
         fontSize: 13,
       }}
     >
-      <span>Yihui Hu</span>
+      <span>
+        <a style={{ color: "inherit", textDecoration: "none" }} href="/">
+          yihui_hu
+        </a>
+      </span>
       <span>
         I like to design and program. <br />
         Previously at{" "}

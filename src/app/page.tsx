@@ -78,9 +78,20 @@ export default function Home() {
                     top: y,
                   }}
                 >
-                  <a className="card-name" href="https://google.com">
-                    {item.id}
-                  </a>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <a className="card-name" href="https://google.com">
+                      {item.id}
+                    </a>
+                    <span className="card-name" style={{ opacity: 0.2 }}>
+                      {item.year}
+                    </span>
+                  </div>
                   <Image
                     src={item.url}
                     alt={item.url}

@@ -33,19 +33,23 @@
 
 .card-name {
   color: black;
-  
+
   width: fit-content;
   font-size: 12px;
   text-decoration: none;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .disc {
-  animation: spin 20s linear infinite; 
+  animation: spin 20s linear infinite;
   text-decoration: none;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   outline-offset: -1px;
@@ -70,7 +74,8 @@
 .currently-img {
   border: 4px solid white;
   transform: rotate(-4deg);
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .link {
@@ -82,6 +87,45 @@
 .link:hover {
   background-color: black;
   color: white;
+}
+
+.book {
+  position: relative;
+}
+
+.book-top {
+  height: calc(10px * 0.8);
+  top: calc(-1 * (10px * 0.8));
+
+  background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1.5px,
+      rgb(0 0 0 / 10%) 1.5px,
+      rgb(0 0 0 / 10%) 3px
+    ),
+    linear-gradient(to top, rgb(0 0 0 / 5%), rgb(0 0 0 / 10%));
+  content: "";
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  transform-origin: bottom left;
+  transform: skewX(48deg);
+}
+
+.book-spine {
+  left: calc(-1 * 10px * 0.8);
+  width: calc(10px * 0.8);
+  background: linear-gradient(to bottom, #424153 33%, #454545 66%, #8f8f8f 99%);
+
+  content: "";
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  transform: skewY(45deg);
+  transform-origin: right bottom;
 }
 
 /* Styles for animating each card */
