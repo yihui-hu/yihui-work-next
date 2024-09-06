@@ -118,6 +118,9 @@ h.t. to https://css-tip.com/accelerate-rotation/
   animation: var(--_a), var(--_a) paused;
   animation-composition: add;
 
+  width: 95px;
+  height: 95px;
+
   text-decoration: none;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   outline-offset: -1px;
@@ -140,8 +143,11 @@ h.t. to https://css-tip.com/accelerate-rotation/
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-.image-container {
+.listening-container {
   position: relative;
+
+  width: 95px;
+  height: 95px;
 }
 
 .center-circle {
@@ -149,13 +155,52 @@ h.t. to https://css-tip.com/accelerate-rotation/
   background-color: #f9f9f9;
   border-radius: 50%;
 
+  width: 16px;
+  height: 16px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 876px) {
+  .listening-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .disc {
+    width: 80px;
+    height: 80px;
+  }
+
+  .center-circle {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .currently-img-wrapper {
   position: relative;
   z-index: 2;
   cursor: grab;
+
+  width: 133px;
+  height: 100px;
+}
+
+@media only screen and (max-width: 876px) {
+  .currently-img-wrapper {
+    width: 94px;
+    height: 72px;
+  }
+
+  .currently-img {
+    width: 94px;
+    height: 72px;
+  }
 }
 
 .currently-img-wrapper:active {
@@ -190,6 +235,16 @@ h.t. to https://css-tip.com/accelerate-rotation/
 
 .book {
   position: relative;
+
+  width: 80px;
+  height: 120px;
+}
+
+@media only screen and (max-width: 876px) {
+  .book {
+    width: 64px;
+    height: 96px;
+  }
 }
 
 .book-top {
