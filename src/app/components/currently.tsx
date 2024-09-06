@@ -5,10 +5,10 @@ export default function Currently() {
   return (
     <div style={{ position: "relative" }}>
       <motion.div
+        className="currently-img-wrapper"
         whileHover={{ rotate: 4 }}
         dragSnapToOrigin={true}
         drag
-        style={{ position: "relative", zIndex: 2, cursor: "grab" }}
       >
         <Image
           src="https://yihui-work.s3.us-east-2.amazonaws.com/sg_sota.webp"
