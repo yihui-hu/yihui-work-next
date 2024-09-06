@@ -3,8 +3,8 @@ import { Roboto_Mono } from 'next/font/google'
 import "../app/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Yihui Hu",
-  description: "Portfolio of Yihui Hu",
+  title: "yihui_hu",
+  description: "Personal site of Yihui Hu",
 };
 
 const roboto = Roboto_Mono({

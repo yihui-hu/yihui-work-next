@@ -125,14 +125,16 @@
 /*
 
 Rotate disc for listening section,
-h.t. to https://css-tip.com/accelerate-rotation/
+wanted to support https://css-tip.com/accelerate-rotation/
+but buggy on Safari :(
 
 */
 
 .disc {
-  --_a: rotate 10s linear infinite;
+  animation: rotate 10s linear infinite;
+  /* --_a: rotate 10s linear infinite;
   animation: var(--_a), var(--_a) paused;
-  animation-composition: add;
+  animation-composition: add; */
 
   width: 95px;
   height: 95px;
@@ -153,7 +155,7 @@ h.t. to https://css-tip.com/accelerate-rotation/
 }
 
 .disc:hover {
-  animation-play-state: running;
+  /* animation-play-state: running; */
   scale: 1.01;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
@@ -245,8 +247,8 @@ h.t. to https://css-tip.com/accelerate-rotation/
 }
 
 .link:hover {
-  background-color: black;
-  color: white;
+  background-color: rgb(209, 209, 209);
+  color: black;
 }
 
 .book {

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import workImages from "../data/workImages";
+import works from "../data/works";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
@@ -38,17 +38,20 @@ export default function Cards() {
     if (!positionsRef.current[index] && screen !== undefined) {
       const randomX =
         Math.random() *
-        (100 - (workImages[index].width / screen.innerWidth) * 100);
+        (100 - (works
+          [index].width / screen.innerWidth) * 100);
       const randomY =
         Math.random() *
-        (100 - (workImages[index].height / screen.innerHeight) * 100);
+        (100 - (works
+          [index].height / screen.innerHeight) * 100);
       positionsRef.current[index] = { x: `${randomX}vw`, y: `${randomY}vh` };
     }
     return positionsRef.current[index];
   };
 
   return !loading
-    ? workImages.map((item, index) => {
+    ? works
+    .map((item, index) => {
         if (screen === undefined) return null;
         const { x, y } = getRandomPosition(index);
         const zIndex = zIndices[index];
@@ -78,7 +81,7 @@ export default function Cards() {
                   justifyContent: "space-between",
                 }}
               >
-                <a className="card-name" href="https://google.com">
+                <a className="card-name" href={item.url}>
                   {item.id}
                 </a>
                 <span className="card-name" style={{ opacity: 0.2 }}>
