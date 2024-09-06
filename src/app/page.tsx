@@ -6,9 +6,7 @@ import Image from "next/image";
 import workImages from "./data/workImages";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import Listening from "./components/listening";
-import Currently from "./components/currently";
-import Reading from "./components/reading";
+import Header from "./components/Header";
 
 export default function Home() {
   const [screen, setScreen] = useState<Window | undefined>(undefined);
@@ -54,72 +52,10 @@ export default function Home() {
 
   return (
     <div className="container">
-      <div
-        style={{
-          margin: 16,
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          fontFamily: "monospace",
-          flexWrap: "wrap",
-          gap: 32,
-          fontSize: 13,
-        }}
-      >
-        <span>Yihui Hu</span>
-        <span>
-          I like to design and program. <br />
-          Previously at{" "}
-          <a className="link" href="https://apple.com">
-            Apple
-          </a>{" "}
-          and{" "}
-          <a className="link" href="https://typo.by">
-            Typo*
-          </a>
-          . <br />
-          <br />
-          Find me on{" "}
-          <a className="link" href="https://are.na/yihui-h">
-            Are.na
-          </a>
-          ,{" "}
-          <a className="link" href="https://github.com/yihui-hu">
-            GitHub
-          </a>
-          , <br />
-          <a className="link" href="https://twitter.com/_yihui">
-            Twitter
-          </a>
-          ,{" "}
-          <a className="link" href="https://linkedin.com/in/yihuihu">
-            LinkedIn
-          </a>
-          , and{" "}
-          <a className="link" href="https://read.cv/yihui">
-            Read.cv
-          </a>
-          .
-        </span>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <span>Listening:</span>
-          <Listening />
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <span>Reading:</span>
-          <Reading />
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <span>Currently:</span>
-          <Currently />
-        </div>
-      </div>
+      <Header />
       {!loading
         ? workImages.map((item, index) => {
-            if (screen === undefined) {
-              return null;
-            }
-
+            if (screen === undefined) return null;
             const { x, y } = getRandomPosition(index);
             const zIndex = zIndices[index];
 

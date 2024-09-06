@@ -32,7 +32,6 @@
 }
 
 .card-name {
-  font-family: monospace;
   color: black;
   
   width: fit-content;
@@ -269,7 +268,7 @@
 
 @keyframes toss-12 {
   0% {
-    transform: translate3d(0vw, -109vh, 0) rotate(24deg);
+    transform: translate3d(0vw, -140vh, 0) rotate(24deg);
   }
   100% {
     transform: translate3d(0, 0, 0) rotate(10deg);
@@ -278,7 +277,7 @@
 .card-12 {
   position: absolute;
   animation: toss-12 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
-  transform: translate3d(0vw, -109vh, 0) rotate(24deg);
+  transform: translate3d(0vw, -140vh, 0) rotate(24deg);
   animation-delay: 0.26s;
 }
 
