@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 export default function Reading() {
+  const isMobile = useMediaQuery("(max-width: 876px)");
   const [opacity, setOpacity] = useState<number>(1);
-  const [scale, setScale] = useState<number>(1);
 
   return (
     <motion.a
@@ -19,7 +20,7 @@ export default function Reading() {
       <motion.div className="book-top" animate={{ opacity: opacity }} />
       <motion.div className="book-spine" animate={{ opacity: opacity }} />
       <motion.div
-        whileHover={{ translateX: -10, translateY: -10 }}
+        whileHover={{ translateX: -8, translateY: -4 }}
         transition={{ type: "easeInOut", duration: 0.2 }}
         onHoverStart={() => setOpacity(0)}
         onHoverEnd={() => setOpacity(1)}
@@ -27,8 +28,8 @@ export default function Reading() {
         <Image
           className="book"
           src="https://m.media-amazon.com/images/I/61rS4ktR59L._AC_UF1000,1000_QL80_.jpg"
-          width="100"
-          height="150"
+          width={isMobile ? 60 : 80}
+          height={isMobile ? 90 : 120}
           alt="A New Program for Graphic Design by David Reinfurt"
           priority={true}
           style={{ userSelect: "none" }}

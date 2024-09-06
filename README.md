@@ -1,4 +1,8 @@
 ## yihui.work (Next.js)
 
-A more optimized [yihui.work](https://yihui.work), hopefully
+v2 of [yihui.work](https://yihui.work)
 
+## References
+
+- [libra.re](https://libra.re)
+- [finetooth.dev](https://finetooth.dev/)

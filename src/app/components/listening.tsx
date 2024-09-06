@@ -2,8 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 export default function Listening() {
+  const isMobile = useMediaQuery("(max-width: 876px)");
+
   const [song, setSong] = useState<string>("undef");
   const [artist, setArtist] = useState<string>("undef");
   const [src, setSrc] = useState<string>(
@@ -47,7 +50,7 @@ export default function Listening() {
       const artist = track.artist["#text"];
       const image = track.image[2]["#text"];
       const { name: title, url: link } = track;
-      
+
       // let listening;
       // if (track["@attr"] !== undefined) {
       //   listening = "🎵 Now Listening";
@@ -84,19 +87,31 @@ export default function Listening() {
   }, []);
 
   return (
-    <div className="image-container">
+    <div
+      className="image-container"
+      style={{ width: isMobile ? 80 : 95, height: isMobile ? 80 : 95 }}
+    >
       <a href={src}>
         <Image
           src={img}
-          width={100}
-          height={100}
+          width={isMobile ? 80 : 95}
+          height={isMobile ? 80 : 95}
           alt={`${song} by ${artist}`}
           className="disc"
           draggable="false"
           priority={true}
         />
       </a>
-      <div className="center-circle" />
+      <div
+        className="center-circle"
+        style={{
+          width: isMobile ? 12 : 16,
+          height: isMobile ? 12 : 16,
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      />
     </div>
   );
 }

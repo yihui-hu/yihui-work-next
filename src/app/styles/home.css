@@ -1,9 +1,45 @@
 .container {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #f9f9f9;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.home-menu {
+  /* position: fixed;
+  top: 16;
+  left: 16; */
+
+  background-color: white;
+  padding: 12px;
+  padding-inline: 16px;
+  width: 200px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: 4px;
+  z-index: 1000;
+
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+    rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+
+  transition: 0.2s ease;
+}
+
+.home-menu:hover {
+  box-shadow: rgba(14, 63, 126, 0.16) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+    rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
 }
 
 .card-container {
@@ -110,13 +146,8 @@ h.t. to https://css-tip.com/accelerate-rotation/
 
 .center-circle {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 16px;
-  height: 16px;
   background-color: #f9f9f9;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
 
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -133,7 +164,7 @@ h.t. to https://css-tip.com/accelerate-rotation/
 
 .currently-img {
   border: 4px solid white;
-  transform: rotate(-4deg);
+  transform: rotate(-8deg);
   box-shadow: rgba(9, 30, 66, 0.15) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 
@@ -162,8 +193,8 @@ h.t. to https://css-tip.com/accelerate-rotation/
 }
 
 .book-top {
-  height: calc(10px * 0.8);
-  top: calc(-1 * (10px * 0.8));
+  height: calc(4px * 0.8);
+  top: calc(-1 * (5px * 0.8));
 
   background: repeating-linear-gradient(
       0deg,
@@ -179,7 +210,7 @@ h.t. to https://css-tip.com/accelerate-rotation/
   position: absolute;
   width: 100%;
   transform-origin: bottom left;
-  transform: skewX(48deg);
+  transform: skewX(67deg);
 }
 
 .book-spine {
@@ -192,7 +223,7 @@ h.t. to https://css-tip.com/accelerate-rotation/
   opacity: 1;
   position: absolute;
   top: 0;
-  transform: skewY(45deg);
+  transform: skewY(24deg);
   transform-origin: right bottom;
 }
 

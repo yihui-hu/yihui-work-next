@@ -66,6 +66,7 @@ export default function Header() {
         <span>Currently:</span>
         <Currently />
       </div>
+      <span />
     </div>
   );
 }
