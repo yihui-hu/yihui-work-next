@@ -7,16 +7,22 @@ export default function Reading() {
   const [scale, setScale] = useState<number>(1);
 
   return (
-    <motion.div
-      style={{ position: "relative", marginLeft: 10, marginTop: 10 }}
-      onHoverStart={() => setOpacity(0)}
-      onHoverEnd={() => setOpacity(1)}
+    <motion.a
+      style={{
+        position: "relative",
+        marginLeft: 10,
+        marginTop: 10,
+        cursor: "pointer",
+      }}
+      href="https://www.goodreads.com/book/show/51572616-a-new-program-for-graphic-design"
     >
       <motion.div className="book-top" animate={{ opacity: opacity }} />
       <motion.div className="book-spine" animate={{ opacity: opacity }} />
       <motion.div
         whileHover={{ translateX: -10, translateY: -10 }}
-        transition={{ type: "easeInOut" }}
+        transition={{ type: "easeInOut", duration: 0.2 }}
+        onHoverStart={() => setOpacity(0)}
+        onHoverEnd={() => setOpacity(1)}
       >
         <Image
           className="book"
@@ -29,6 +35,6 @@ export default function Reading() {
           draggable="false"
         />
       </motion.div>
-    </motion.div>
+    </motion.a>
   );
 }

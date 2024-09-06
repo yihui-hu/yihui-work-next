@@ -22,10 +22,10 @@ export default function Home() {
 
     let initialZIndices: { [key: number]: number } = {};
     for (let i = 0; i < 18; i++) {
-      let newZIndex = i;
+      let newZIndex = i + 100;
       initialZIndices[i] = newZIndex;
     }
-    initialZIndices[-1] = 18; // This is our max zIndex, which will increment whenever user interacts w/ a card
+    initialZIndices[-1] = 120; // This is our max zIndex, which will increment whenever user interacts w/ a card
     setZIndices(initialZIndices);
   }, []);
 

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function Listening() {
   const [song, setSong] = useState<string>("undef");
@@ -48,24 +47,23 @@ export default function Listening() {
       const artist = track.artist["#text"];
       const image = track.image[2]["#text"];
       const { name: title, url: link } = track;
-      console.log(image);
-
-      let listening;
-      if (track["@attr"] !== undefined) {
-        listening = "🎵 Now Listening";
-      } else {
-        const timestamp = parseInt(track.date.uts);
-        const date = new Date(timestamp * 1000);
-        const dateFormat =
-          date.getHours() +
-          ":" +
-          (date.getMinutes() < 10
-            ? "0" + date.getMinutes()
-            : date.getMinutes()) +
-          ", " +
-          date.toDateString();
-        listening = dateFormat;
-      }
+      
+      // let listening;
+      // if (track["@attr"] !== undefined) {
+      //   listening = "🎵 Now Listening";
+      // } else {
+      //   const timestamp = parseInt(track.date.uts);
+      //   const date = new Date(timestamp * 1000);
+      //   const dateFormat =
+      //     date.getHours() +
+      //     ":" +
+      //     (date.getMinutes() < 10
+      //       ? "0" + date.getMinutes()
+      //       : date.getMinutes()) +
+      //     ", " +
+      //     date.toDateString();
+      //   listening = dateFormat;
+      // }
 
       setImg(image);
       setArtist(artist);
@@ -76,7 +74,7 @@ export default function Listening() {
       localStorage.setItem("listeningToLink", link);
       localStorage.setItem("listeningToTitle", title);
       localStorage.setItem("listeningToArtist", artist);
-      localStorage.setItem("listeningToListening", listening);
+      // localStorage.setItem("listeningToListening", listening);
       localStorage.setItem(
         "listeningToCacheTimestamp",
         new Date().getTime().toString()
@@ -87,15 +85,17 @@ export default function Listening() {
 
   return (
     <div className="image-container">
-      <Image
-        src={img}
-        width={100}
-        height={100}
-        alt={`${song} by ${artist}`}
-        className="disc"
-        draggable="false"
-        priority={true}
-      />
+      <a href={src}>
+        <Image
+          src={img}
+          width={100}
+          height={100}
+          alt={`${song} by ${artist}`}
+          className="disc"
+          draggable="false"
+          priority={true}
+        />
+      </a>
       <div className="center-circle" />
     </div>
   );
