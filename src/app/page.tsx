@@ -61,6 +61,7 @@ export default function Home() {
 
             return (
               <motion.div
+                key={item.url}
                 drag
                 dragMomentum={false}
                 style={{
@@ -68,8 +69,8 @@ export default function Home() {
                   zIndex: zIndex,
                   position: "relative",
                 }}
-                key={item.url}
                 onMouseDown={() => handleImageClick(index)} // Handle click to set active index
+                whileHover={{ translateY: -4 }}
               >
                 <div
                   className={`card-${index} card`}
