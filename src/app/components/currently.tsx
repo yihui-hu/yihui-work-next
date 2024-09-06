@@ -17,6 +17,7 @@ export default function Currently() {
           alt="currently missing summer in Singapore"
           className="currently-img"
           draggable={false}
+          priority={true}
         />
       </motion.div>
       <div
