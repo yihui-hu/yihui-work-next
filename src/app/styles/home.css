@@ -90,6 +90,10 @@
   .card {
     scale: 0.8
   }
+  
+  .card:active {
+    scale: 0.801;
+  }
 }
 
 .card:hover {
