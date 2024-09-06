@@ -61,6 +61,7 @@ export default function Cards() {
             dragMomentum={false}
             style={{ zIndex: zIndex }}
             onMouseDown={() => handleImageClick(index)} // Handle click to set active index
+            onTouchStart={() => handleImageClick(index)}
             whileHover={{ translateY: -4 }}
           >
             <div

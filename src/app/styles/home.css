@@ -86,16 +86,6 @@
   display: inline-block;
 }
 
-@media only screen and (max-width: 576px) {
-  .card {
-    scale: 0.8;
-  }
-  
-  .card:active {
-    scale: 0.81;
-  }
-}
-
 .card:hover {
   transform: translateY(-4px);
 }
@@ -106,6 +96,16 @@
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+}
+
+@media only screen and (max-width: 576px) {
+  .card {
+    scale: 0.8;
+  }
+  
+  .card:active {
+    scale: 0.81;
+  }
 }
 
 .card-name {
