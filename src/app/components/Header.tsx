@@ -1,6 +1,6 @@
-import Currently from "./Currently";
-import Listening from "./Listening";
-import Reading from "./Reading";
+import Currently from "./currently";
+import Listening from "./listening";
+import Reading from "./reading";
 
 export default function Header() {
   return (

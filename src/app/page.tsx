@@ -6,7 +6,7 @@ import Image from "next/image";
 import workImages from "./data/workImages";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import Header from "./components/Header";
+import Header from "./components/header";
 
 export default function Home() {
   const [screen, setScreen] = useState<Window | undefined>(undefined);
