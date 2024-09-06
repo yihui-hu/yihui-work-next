@@ -88,11 +88,11 @@
 
 @media only screen and (max-width: 576px) {
   .card {
-    scale: 0.8
+    scale: 0.8;
   }
   
   .card:active {
-    scale: 0.801;
+    scale: 0.81;
   }
 }
 
