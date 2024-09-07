@@ -7,7 +7,7 @@ export default function Header() {
     <div className="header">
       <span>
         <a style={{ color: "inherit", textDecoration: "none" }} href="/">
-          yihui_hu
+          Yihui Hu
         </a>
       </span>
       <span>

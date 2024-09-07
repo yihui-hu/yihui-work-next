@@ -4,7 +4,7 @@ import UmamiProvider from "next-umami";
 import "../app/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "yihui_hu",
+  title: "Yihui Hu",
   description: "Personal site of Yihui Hu",
 };
 
