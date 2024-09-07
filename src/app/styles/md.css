@@ -66,6 +66,14 @@ a:hover {
   color: black;
 }
 
+.back {
+  text-decoration: none;
+}
+
+.back:hover {
+  background-color: unset;
+}
+
 hr {
   margin-block: 12px;
   border: 0.5px solid #d9d9d9;
