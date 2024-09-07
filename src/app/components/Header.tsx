@@ -46,15 +46,15 @@ export default function Header() {
         </a>
         .
       </span>
-      <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         <span>Listening:</span>
         <Listening />
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
         <span>Reading:</span>
         <Reading />
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         <span>Currently:</span>
         <Currently />
       </div>
