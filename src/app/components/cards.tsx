@@ -79,6 +79,7 @@ export default function Cards() {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "space-between",
+                  margin: 8,
                 }}
               >
                 <a className="card-name" href={item.url}>
