@@ -47,7 +47,7 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/arith_desktop.webp",
-    id: "arith.js",
+    id: "arithJS",
     year: "2022",
     category: "code",
     width: 412,
