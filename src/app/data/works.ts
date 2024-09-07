@@ -52,7 +52,7 @@ const works: WorkData[] = [
     category: "code",
     width: 412,
     height: 254,
-    url: "https://arith.vercel.app"
+    url: "/works/arith"
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/everyday_trash.webp",
