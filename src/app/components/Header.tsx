@@ -5,11 +5,13 @@ import Reading from "./reading";
 export default function Header() {
   return (
     <div className="header">
-      <span>
+      <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
         <a style={{ color: "inherit", textDecoration: "none" }} href="/">
           Yihui Hu
+          <br />
+          <span style={{ color: "#a9a9a9", fontSize: 14 }}>何逸晖</span>
         </a>
-      </span>
+      </div>
       <span>
         I like to design and program. <br />
         Previously at{" "}
