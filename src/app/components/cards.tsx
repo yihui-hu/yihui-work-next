@@ -19,7 +19,7 @@ export default function Cards() {
     setLoading(false);
 
     let initialZIndices: { [key: number]: number } = {};
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < 19; i++) {
       let newZIndex = i + 100;
       initialZIndices[i] = newZIndex;
     }

@@ -358,7 +358,7 @@ but buggy on Safari :(
     transform: translate3d(124vw, 104vh, 0) rotate(4deg);
   }
   100% {
-    transform: translate3d(0, 0, 0) rotate(14deg);
+    transform: translate3d(0, 0, 0) rotate(-8deg);
   }
 }
 .card-3 {
@@ -463,7 +463,7 @@ but buggy on Safari :(
     transform: translate3d(104vw, -102vh, 0) rotate(-20deg);
   }
   100% {
-    transform: translate3d(0, 0, 0) rotate(8deg);
+    transform: translate3d(0, 0, 0) rotate(-4deg);
   }
 }
 .card-10 {
@@ -493,7 +493,7 @@ but buggy on Safari :(
     transform: translate3d(0vw, -140vh, 0) rotate(24deg);
   }
   100% {
-    transform: translate3d(0, 0, 0) rotate(10deg);
+    transform: translate3d(0, 0, 0) rotate(-2deg);
   }
 }
 .card-12 {
@@ -508,7 +508,7 @@ but buggy on Safari :(
     transform: translate3d(104, 108vh, 0) rotate(13deg);
   }
   100% {
-    transform: translate3d(0, 0, 0) rotate(-12deg);
+    transform: translate3d(0, 0, 0) rotate(2deg);
   }
 }
 .card-13 {
@@ -538,7 +538,7 @@ but buggy on Safari :(
     transform: translate3d(-104vw, 110vh, 0) rotate(30deg);
   }
   100% {
-    transform: translate3d(0, 0, 0) rotate(6deg);
+    transform: translate3d(0, 0, 0) rotate(-5deg);
   }
 }
 .card-15 {
@@ -576,4 +576,19 @@ but buggy on Safari :(
   animation: toss-17 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
   transform: translate3d(-102vw, -115vh, 0) rotate(25deg);
   animation-delay: 0.36s;
+}
+
+@keyframes toss-18 {
+  0% {
+    transform: translate3d(-140vw, 120vh, 0) rotate(4deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-2deg);
+  }
+}
+.card-18 {
+  position: absolute;
+  animation: toss-18 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  transform: translate3d(-140vw, 120vh, 0) rotate(4deg);
+  animation-delay: 0.38s;
 }

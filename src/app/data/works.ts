@@ -11,6 +11,26 @@ interface WorkData {
 
 const works: WorkData[] = [
   {
+    img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/yihuihu.webp",
+    id: "yihuihu.com",
+    external: true,
+    year: "2024",
+    category: "code design",
+    width: 1512 / 3.3,
+    height: 944 / 3.3,
+    url: "https://yihuihu.com"
+  },
+  {
+    img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/cards/arena-card.webp",
+    id: "are:na",
+    external: true,
+    year: "2023–",
+    category: "code design",
+    width: 1180 / 3,
+    height: 800 / 3,
+    url: "https://yihuihu.com/arena"
+  },
+  {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/typo_super_bubble.png",
     id: "super bubble",
     external: true,
@@ -29,16 +49,6 @@ const works: WorkData[] = [
     width: 412,
     height: 249,
     url: "https://yihui.work/personas"
-  },
-  {
-    img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/arena-ios-teaser-redux.png",
-    id: "are:na",
-    external: true,
-    year: "2023–",
-    category: "code design",
-    width: 412,
-    height: 248,
-    url: "https://yihuihu.com/arena"
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/20XX_poster.webp",
@@ -171,25 +181,25 @@ const works: WorkData[] = [
     url: "/works/y0p"
   },
   {
-    img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/yhhu_xyz_desktop.webp",
+    img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/cards/yhhu-xyz-card.webp",
     id: "yhhu.xyz",
     external: false,
     year: "2021–22",
     category: "code design art",
-    width: 412,
-    height: 248,
+    width: 2632 / 6,
+    height: 1704 / 6,
     url: "/works/yhhu-xyz"
   },
   {
-    img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/ZINEDEF_stories.webp",
+    img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/cards/zinedef-card.webp",
     id: "ZINEDEF",
     external: false,
     year: "2019–21",
     category: "art design",
-    width: 412,
-    height: 231,
+    width: 1219 / 3,
+    height: 889 / 3,
     url: "/works/ZINEDEF"
   },
 ];
 
-export default works;
+export default works.reverse();
