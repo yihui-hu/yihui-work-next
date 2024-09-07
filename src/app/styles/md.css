@@ -3,12 +3,29 @@ body {
   font-size: 13px;
   margin: auto;
   margin-block: 64px;
+  animation: opacity 0.5s ease forwards;
+  will-change: filter;
 }
 
 @media only screen and (max-width: 640px) {
   body {
     width: auto;
     margin: 16px;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    /* transform: translateY(20px); */
+    /* filter: blur(4px);
+    -webkit-filter: blur(4px); */
+    opacity: 0;
+  }
+  100% {
+    /* transform: translateY(0); */
+    /* filter: blur(0px);
+    -webkit-filter: blur(0px); */
+    opacity: 1;
   }
 }
 

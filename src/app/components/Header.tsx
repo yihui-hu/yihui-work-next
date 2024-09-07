@@ -4,17 +4,7 @@ import Reading from "./reading";
 
 export default function Header() {
   return (
-    <div
-      style={{
-        margin: 16,
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        flexWrap: "wrap",
-        gap: 32,
-        fontSize: 13,
-      }}
-    >
+    <div className="header">
       <span>
         <a style={{ color: "inherit", textDecoration: "none" }} href="/">
           yihui_hu
