@@ -17,14 +17,18 @@ body {
 }
 
 .heading {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  text-align: center;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
 }
 
 .heading > span {
+  text-align: right;
   color: #b9b9b9;
 }
 
@@ -67,6 +71,7 @@ a:hover {
 }
 
 .back {
+  text-align: left;
   text-decoration: none;
 }
 
