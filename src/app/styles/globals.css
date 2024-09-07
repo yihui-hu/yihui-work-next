@@ -45,3 +45,7 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+::selection {
+  background-color: #d9d9d9;
+}

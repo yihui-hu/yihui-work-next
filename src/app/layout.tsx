@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto_Mono } from 'next/font/google'
+import { Roboto_Mono } from 'next/font/google';
 import "../app/styles/globals.css";
 
 export const metadata: Metadata = {

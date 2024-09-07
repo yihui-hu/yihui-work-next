@@ -83,7 +83,7 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/goodreads_overview.webp",
-    id: "goodreads redesign",
+    id: "goodreads exercise",
     year: "2021",
     category: "design",
     width: 412,
@@ -106,7 +106,7 @@ const works: WorkData[] = [
     category: "code design",
     width: 412,
     height: 254,
-    url: "https://henesys.online"
+    url: "/works/henesys"
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/misc_water.webp",

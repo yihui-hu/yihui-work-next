@@ -1,7 +1,29 @@
 body {
-  font-family: 'Times New Roman', Times, serif;
   margin: 16px;
-  width: 40%;
+  width: 576px;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    width: auto;
+  }
+}
+
+::selection {
+  background-color: #d9d9d9;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading > span {
+  color: #b9b9b9;
 }
 
 .img {
@@ -10,6 +32,61 @@ body {
   outline-offset: -1px;
 }
 
-p {
+p,
+ul {
   margin-block: 12px;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+blockquote {
+  border-left: 2px solid #d9d9d9;
+  margin: 16px 0px 16px 16px;
+  padding-inline: 12px;
+  quotes: "\201C""\201D""\2018""\2019";
+
+  p {
+    margin: 0 !important;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration-style: dotted;
+  transition: 0.1s ease;
+}
+
+a:hover {
+  background-color: rgb(209, 209, 209);
+  color: black;
+}
+
+hr {
+  margin-block: 12px;
+  border: 0.5px solid #d9d9d9;
+}
+
+pre {
+  background-color: #e9e9e9;
+  border: 1px solid #c9c9c9;
+  padding: 12px;
+  overflow: scroll;
+}
+
+pre > code {
+  background-color: unset;
+  font-style: normal;
+}
+
+code {
+  background-color: #d9d9d9;
+  font-style: italic;
+}
+
+.iframe {
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  outline-offset: -1px;
 }
