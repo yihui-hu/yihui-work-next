@@ -4,6 +4,7 @@ import Image from "next/image";
 import works from "../data/works";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { RightArrow, UpRightArrow } from "./arrows";
 
 export default function Cards() {
   const [screen, setScreen] = useState<Window | undefined>(undefined);
@@ -37,21 +38,17 @@ export default function Cards() {
   const getRandomPosition = (index: number) => {
     if (!positionsRef.current[index] && screen !== undefined) {
       const randomX =
-        Math.random() *
-        (100 - (works
-          [index].width / screen.innerWidth) * 100);
+        Math.random() * (100 - (works[index].width / screen.innerWidth) * 100);
       const randomY =
         Math.random() *
-        (100 - (works
-          [index].height / screen.innerHeight) * 100);
+        (100 - (works[index].height / screen.innerHeight) * 100);
       positionsRef.current[index] = { x: `${randomX}vw`, y: `${randomY}vh` };
     }
     return positionsRef.current[index];
   };
 
   return !loading
-    ? works
-    .map((item, index) => {
+    ? works.map((item, index) => {
         if (screen === undefined) return null;
         const { x, y } = getRandomPosition(index);
         const zIndex = zIndices[index];
@@ -74,17 +71,13 @@ export default function Cards() {
                 top: y,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  margin: 8,
-                }}
-              >
-                <a className="card-name" href={item.url}>
-                  {item.id}
-                </a>
+              <div className="card-header">
+                <div className="card-link">
+                  <a className="card-name" href={item.url}>
+                    {item.id}
+                  </a>
+                  {item.external ? <UpRightArrow /> : <RightArrow />}
+                </div>
                 <span className="card-name" style={{ opacity: 0.2 }}>
                   {item.year}
                 </span>

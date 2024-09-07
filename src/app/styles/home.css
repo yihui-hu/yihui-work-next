@@ -82,6 +82,28 @@
   -webkit-backdrop-filter: blur(2px);
 }
 
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 4px;
+  margin-bottom: 6px;
+}
+
+.card-link {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: baseline;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.card-link:hover {
+  gap: 10px;
+  opacity: 0.5;
+}
+
 @media only screen and (max-width: 576px) {
   .card {
     scale: 0.8;

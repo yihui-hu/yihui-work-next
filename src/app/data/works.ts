@@ -1,6 +1,7 @@
 interface WorkData {
   img_url: string;
   id: string;
+  external: boolean;
   year: string;
   category: string;
   width: number;
@@ -11,7 +12,8 @@ interface WorkData {
 const works: WorkData[] = [
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/typo_super_bubble.png",
-    id: "super bubble 🡕",
+    id: "super bubble",
+    external: true,
     year: "2024",
     category: "code design",
     width: 411 / 1.8,
@@ -20,7 +22,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/personas_work_image.png",
-    id: "personas 🡕",
+    id: "personas",
+    external: true,
     year: "2024",
     category: "design",
     width: 412,
@@ -29,7 +32,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/arena-ios-teaser-redux.png",
-    id: "are:na 🡕",
+    id: "are:na",
+    external: true,
     year: "2023–",
     category: "code design",
     width: 412,
@@ -38,7 +42,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/20XX_poster.webp",
-    id: "20XX flora & fauna →",
+    id: "20XX flora & fauna",
+    external: false,
     year: "2020",
     category: "art design",
     width: 412 / 1.4,
@@ -47,7 +52,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/arith_desktop.webp",
-    id: "arithJS →",
+    id: "arithJS",
+    external: false,
     year: "2022",
     category: "code",
     width: 412,
@@ -56,7 +62,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/everyday_trash.webp",
-    id: "everyday____ →",
+    id: "everyday____",
+    external: false,
     year: "2017–18",
     category: "art",
     width: 412,
@@ -65,7 +72,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/famicase.webp",
-    id: "famicase →",
+    id: "famicase",
+    external: false,
     year: "2022",
     category: "art design",
     width: 412,
@@ -74,7 +82,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/figma_plugin.webp",
-    id: "competitive designing 🡕",
+    id: "competitive designing",
+    external: true,
     year: "2023–",
     category: "code design",
     width: 412 / 1.5,
@@ -83,7 +92,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/goodreads_overview.webp",
-    id: "goodreads exercise →",
+    id: "goodreads exercise",
+    external: false,
     year: "2021",
     category: "design",
     width: 412,
@@ -92,7 +102,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/graphite_allegory.webp",
-    id: "graphite reproductions →",
+    id: "graphite reproductions",
+    external: false,
     year: "2017–",
     category: "art",
     width: 412 / 1.5,
@@ -101,7 +112,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/henesys_tags.webp",
-    id: "henesys →",
+    id: "henesys",
+    external: false,
     year: "2022–23",
     category: "code design",
     width: 412,
@@ -110,7 +122,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/misc_water.webp",
-    id: "misc →",
+    id: "misc",
+    external: false,
     year: "2017–",
     category: "design art",
     width: 412 / 1.5,
@@ -119,7 +132,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/pidgin.webp",
-    id: "pidgin →",
+    id: "pidgin",
+    external: false,
     year: "2023",
     category: "code",
     width: 412 / 1.4,
@@ -128,7 +142,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/pokesearch_duo.webp",
-    id: "pokéSearch →",
+    id: "pokéSearch",
+    external: false,
     year: "2022",
     category: "code",
     width: 412 / 1.2,
@@ -137,7 +152,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/s-i-l_grid.webp",
-    id: "sites-i-like →",
+    id: "sites-i-like",
+    external: false,
     year: "2022",
     category: "code",
     width: 412,
@@ -146,7 +162,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/y0p_veiled.webp",
-    id: "y0p →",
+    id: "y0p",
+    external: false,
     year: "2023",
     category: "code",
     width: 412,
@@ -155,7 +172,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/yhhu_xyz_desktop.webp",
-    id: "yhhu.xyz →",
+    id: "yhhu.xyz",
+    external: false,
     year: "2021–22",
     category: "code design art",
     width: 412,
@@ -164,7 +182,8 @@ const works: WorkData[] = [
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/ZINEDEF_stories.webp",
-    id: "ZINEDEF →",
+    id: "ZINEDEF",
+    external: false,
     year: "2019–21",
     category: "art design",
     width: 412,
