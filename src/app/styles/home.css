@@ -257,6 +257,22 @@ but buggy on Safari :(
   color: black;
 }
 
+.about-link {
+  text-decoration: none;
+  transition: 0.1s ease;
+  color: inherit;
+
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.about-link:hover {
+  gap: 10px;
+  opacity: 0.5;
+}
+
 .book {
   position: relative;
 

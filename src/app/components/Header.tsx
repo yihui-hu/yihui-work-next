@@ -1,3 +1,4 @@
+import { RightArrow } from "./arrows";
 import Currently from "./currently";
 import Listening from "./listening";
 import Reading from "./reading";
@@ -45,6 +46,11 @@ export default function Header() {
           Read.cv
         </a>
         .
+        <br />
+        <br />
+        <a className="about-link" href="/about">
+          More about me <RightArrow />
+        </a>
       </span>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         <span>Listening:</span>
