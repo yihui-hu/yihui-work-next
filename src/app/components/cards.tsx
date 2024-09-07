@@ -72,12 +72,10 @@ export default function Cards() {
               }}
             >
               <div className="card-header">
-                <div className="card-link">
-                  <a className="card-name" href={item.url}>
-                    {item.id}
-                  </a>
+                <a className="card-name card-link" href={item.url}>
+                  <span>{item.id}</span>
                   {item.external ? <UpRightArrow /> : <RightArrow />}
-                </div>
+                </a>
                 <span className="card-name" style={{ opacity: 0.2 }}>
                   {item.year}
                 </span>
