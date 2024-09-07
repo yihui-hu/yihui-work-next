@@ -15,6 +15,7 @@
     "@types/mdx": "^2.0.13",
     "framer-motion": "^11.5.2",
     "next": "^14.2.8",
+    "next-umami": "^0.0.4",
     "react": "^18",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18",
