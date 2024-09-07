@@ -71,6 +71,7 @@ a:hover {
 }
 
 .back {
+  width: fit-content;
   text-align: left;
   text-decoration: none;
 }
