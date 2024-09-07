@@ -266,6 +266,8 @@ but buggy on Safari :(
   flex-direction: row;
   gap: 8px;
   align-items: baseline;
+
+  width: fit-content;
 }
 
 .about-link:hover {
