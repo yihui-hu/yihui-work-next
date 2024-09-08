@@ -44,9 +44,9 @@
 .card {
   /* Performance with blur filters is not ideal, unfortunately */
 
-  will-change: transform;
+  /* will-change: transform;
   backdrop-filter: blur(0.4px);
-  -webkit-backdrop-filter: blur(0.4px);
+  -webkit-backdrop-filter: blur(0.4px); */
 
   padding: 4px;
   padding-top: 2px;
