@@ -82,7 +82,7 @@ export default function Header() {
         <div className="works-index">
           {works.slice(0, 9).map((work) => {
             return (
-              <HoverableWork id={work.id} url={work.url}>
+              <HoverableWork id={work.id} url={work.url} key={work.id}>
                 {work.id} <span style={{ color: "#b9b9b9" }}>{work.year}</span>
               </HoverableWork>
             );
@@ -91,7 +91,7 @@ export default function Header() {
         <div className="works-index">
           {works.slice(10).map((work) => {
             return (
-              <HoverableWork id={work.id} url={work.url}>
+              <HoverableWork id={work.id} url={work.url} key={work.id}>
                 {work.id} <span style={{ color: "#b9b9b9" }}>{work.year}</span>
               </HoverableWork>
             );
