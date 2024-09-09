@@ -43,7 +43,7 @@ export default function Cards() {
         Math.random() * (100 - (worksReversed[index].width / screen.innerWidth) * 100);
       const randomY =
         Math.random() *
-        (100 - (worksReversed[index].height / (screen.innerHeight - 400)) * 100);
+        (100 - (worksReversed[index].height / (screen.innerHeight - 200)) * 100);
       positionsRef.current[index] = { x: `${randomX}vw`, y: `${randomY}vh` };
     }
     return positionsRef.current[index];
