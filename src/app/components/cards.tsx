@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import works from "../data/works";
-import { useState, useEffect, useRef } from "react";
+import { worksReversed } from "../data/works";
+import { useState, useEffect, useRef, useContext } from "react";
 import { motion } from "framer-motion";
 import { RightArrow, UpRightArrow } from "./arrows";
+import { CardsContext } from "../cardsContext";
 
 export default function Cards() {
   const [screen, setScreen] = useState<Window | undefined>(undefined);
@@ -13,6 +14,7 @@ export default function Cards() {
   const [zIndices, setZIndices] = useState<{
     [key: number]: number;
   }>({}); // State to store z-indices of each card
+  const { focusedCard } = useContext(CardsContext);
 
   useEffect(() => {
     setScreen(window);
@@ -38,20 +40,22 @@ export default function Cards() {
   const getRandomPosition = (index: number) => {
     if (!positionsRef.current[index] && screen !== undefined) {
       const randomX =
-        Math.random() * (100 - (works[index].width / screen.innerWidth) * 100);
+        Math.random() * (100 - (worksReversed[index].width / screen.innerWidth) * 100);
       const randomY =
         Math.random() *
-        (100 - (works[index].height / screen.innerHeight) * 100);
+        (100 - (worksReversed[index].height / (screen.innerHeight - 400)) * 100);
       positionsRef.current[index] = { x: `${randomX}vw`, y: `${randomY}vh` };
     }
     return positionsRef.current[index];
   };
 
   return !loading
-    ? works.map((item, index) => {
+    ? worksReversed.map((item, index) => {
         if (screen === undefined) return null;
         const { x, y } = getRandomPosition(index);
         const zIndex = zIndices[index];
+        const cardInFocus =
+          focusedCard !== null ? (focusedCard === item.id ? true : false) : true;
 
         return (
           <motion.div
@@ -69,6 +73,8 @@ export default function Cards() {
               style={{
                 left: x,
                 top: y,
+                filter: cardInFocus ? "unset" : "blur(12px)",
+                opacity: cardInFocus ? 1 : 0,
               }}
             >
               <div className="card-header">

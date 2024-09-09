@@ -1,14 +1,8 @@
 .container {
   position: relative;
   width: 100vw;
-  min-height: 140vh;
+  min-height: 120vh;
   overflow: hidden;
-}
-
-@media only screen and (max-width: 376px) {
-  .container {
-    min-height: 120vh;
-  }
 }
 
 .header {
@@ -32,6 +26,12 @@
   }
 }
 
+@media only screen and (max-width: 1256px) {
+  .works-index {
+    display: none;
+  }
+}
+
 .card-container {
   cursor: grab;
   position: relative;
@@ -47,6 +47,8 @@
   /* will-change: transform;
   backdrop-filter: blur(0.4px);
   -webkit-backdrop-filter: blur(0.4px); */
+
+  will-change: transform, filter;
 
   padding: 4px;
   padding-top: 2px;
@@ -246,15 +248,27 @@ but buggy on Safari :(
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-.link {
+.link, .hoverable-work {
   text-decoration: none;
   transition: 0.1s ease;
   color: inherit;
 }
 
 .link:hover {
-  background-color: rgb(209, 209, 209);
+  background-color: #d9d9d9;
+  box-shadow: 4px 0 0 #d9d9d9, -4px 0 0 #d9d9d9;
   color: black;
+}
+
+.hoverable-work {
+  border-radius: 2px;
+  cursor: pointer;
+  padding-inline: 8px;
+  display: block;
+}
+
+.hoverable-work:hover {
+  background-color: #d9d9d9;
 }
 
 .about-link {

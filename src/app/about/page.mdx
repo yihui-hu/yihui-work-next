@@ -1,11 +1,12 @@
 import { LeftArrow } from "../components/arrows";
+import LastUpdated from "./lastUpdated";
 
 <div className="heading">
   <a className="back" href="/"><LeftArrow />back</a>
   <span />
 </div>
 
-<div style={{ marginBottom: 32 }}>
+<div style={{ marginBottom: 24 }}>
   <video
     className="about-video"
     src="https://product-design-portfolio.s3.us-east-2.amazonaws.com/me_fuji.mp4"
@@ -15,7 +16,7 @@ import { LeftArrow } from "../components/arrows";
     autoPlay={true}
     playsInline={true}
   />
-  <div style={{ marginTop: 4, opacity: 0.5 }}>c. Dec 2023</div>
+  <div style={{ marginTop: 4, color: "#b9b9b9" }}>c. Dec 2023</div>
 </div>
 
 Hello! I'm Yihui. I'm from Singapore, currently wrapping up my senior year as a Computer Science major at Tufts University.
@@ -23,3 +24,5 @@ Hello! I'm Yihui. I'm from Singapore, currently wrapping up my senior year as a 
 I enjoy working on early-stage software and shared experiences on the web, building with polish and performance in mind.
 
 In my free time, I continue to explore type, print, design and zine-making. You can view my CV [here](https://drive.google.com/file/d/1GsnLYP3rDLM0YW6e4UPx_i8z2ClFOyQA/view).
+
+<LastUpdated />

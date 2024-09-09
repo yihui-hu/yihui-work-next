@@ -2,8 +2,34 @@ import { RightArrow } from "./arrows";
 import Currently from "./currently";
 import Listening from "./listening";
 import Reading from "./reading";
+import { CardsContext } from "../cardsContext";
+import { ReactNode, useContext } from "react";
+import { motion } from "framer-motion";
+import { works } from "../data/works";
+
+interface HoverableWorkProps {
+  id: string;
+  children: ReactNode;
+  url: string;
+}
 
 export default function Header() {
+  const { setFocusedCard } = useContext(CardsContext);
+
+  const HoverableWork = ({ id, children, url }: HoverableWorkProps) => {
+    return (
+      <motion.a
+        href={url}
+        className="hoverable-work"
+        onHoverStart={() => setFocusedCard(id)}
+        onHoverEnd={() => setFocusedCard(null)}
+        style={{ cursor: "pointer" }}
+      >
+        {children}
+      </motion.a>
+    );
+  };
+
   return (
     <div className="header">
       <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
@@ -52,6 +78,26 @@ export default function Header() {
           More about me <RightArrow />
         </a>
       </span>
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <div className="works-index">
+          {works.slice(0, 9).map((work) => {
+            return (
+              <HoverableWork id={work.id} url={work.url}>
+                {work.id} <span style={{ color: "#b9b9b9" }}>{work.year}</span>
+              </HoverableWork>
+            );
+          })}
+        </div>
+        <div className="works-index">
+          {works.slice(10).map((work) => {
+            return (
+              <HoverableWork id={work.id} url={work.url}>
+                {work.id} <span style={{ color: "#b9b9b9" }}>{work.year}</span>
+              </HoverableWork>
+            );
+          })}
+        </div>
+      </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         <span>Listening:</span>
         <Listening />
@@ -64,7 +110,6 @@ export default function Header() {
         <span>Currently:</span>
         <Currently />
       </div>
-      <span />
     </div>
   );
 }
