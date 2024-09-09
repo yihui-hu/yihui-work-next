@@ -78,24 +78,44 @@ export default function Header() {
           More about me <RightArrow />
         </a>
       </span>
-      <div className="works-index-container" style={{ display: "flex", flexDirection: "row" }}>
-        <div className="works-index">
-          {works.slice(0, 9).map((work) => {
-            return (
-              <HoverableWork id={work.id} url={work.url} key={work.id}>
-                {work.id} <span style={{ color: "#b9b9b9" }}>{work.year}</span>
-              </HoverableWork>
-            );
-          })}
+      <div className="works-index-container">
+        <div
+          style={{
+            paddingInline: 8,
+            paddingBottom: 2,
+            display: "flex",
+            flexDirection: "row",
+            gap: 4,
+            alignItems: "center",
+          }}
+        >
+          works <div style={{ fontSize: 11, color: "#b9b9b9" }}>(18)</div>
         </div>
-        <div className="works-index">
-          {works.slice(10).map((work) => {
-            return (
-              <HoverableWork id={work.id} url={work.url} key={work.id}>
-                {work.id} <span style={{ color: "#b9b9b9" }}>{work.year}</span>
-              </HoverableWork>
-            );
-          })}
+        <hr style={{ border: "0.5px solid #e9e9e9" }} />
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <div className="works-index">
+            {works.slice(0, 9).map((work) => {
+              return (
+                <HoverableWork id={work.id} url={work.url} key={work.id}>
+                  {work.id}{" "}
+                  <span style={{ color: "#b9b9b9" }}>{work.year}</span>
+                </HoverableWork>
+              );
+            })}
+          </div>
+          <div
+            className="works-index"
+            style={{ borderLeft: "1px solid #e9e9e9" }}
+          >
+            {works.slice(10).map((work) => {
+              return (
+                <HoverableWork id={work.id} url={work.url} key={work.id}>
+                  {work.id}{" "}
+                  <span style={{ color: "#b9b9b9" }}>{work.year}</span>
+                </HoverableWork>
+              );
+            })}
+          </div>
         </div>
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>

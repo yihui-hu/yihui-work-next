@@ -26,6 +26,12 @@
   }
 }
 
+.works-index-container {
+  background-color: rgba(1, 1, 1, 0.01);
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+}
+
 @media only screen and (max-width: 1256px) {
   .works-index-container {
     display: none !important;
@@ -265,14 +271,13 @@ but buggy on Safari :(
 }
 
 .hoverable-work {
-  border-radius: 2px;
   cursor: pointer;
   padding-inline: 8px;
   display: block;
 }
 
 .hoverable-work:hover {
-  background-color: #d9d9d9;
+  background-color: #e9e9e9;
 }
 
 .about-link {

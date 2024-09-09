@@ -80,7 +80,8 @@ a {
 }
 
 a:hover {
-  background-color: rgb(209, 209, 209);
+  background-color: #d9d9d9;
+  box-shadow: 4px 0 0 #d9d9d9, -4px 0 0 #d9d9d9;
   color: black;
 }
 
@@ -101,6 +102,7 @@ a:hover {
   gap: 10px;
   opacity: 0.5;
   background-color: unset;
+  box-shadow: unset;
 }
 
 hr {
