@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { CardsContext, defaultFocusedCard } from "./cardsContext";
 
 export default function Home() {
-  const [focusedCard, setFocusedCard] = useState<number | null>(
+  const [focusedCard, setFocusedCard] = useState<string | null>(
     defaultFocusedCard.focusedCard
   );
 
