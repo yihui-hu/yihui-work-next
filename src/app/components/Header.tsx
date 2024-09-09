@@ -78,7 +78,7 @@ export default function Header() {
           More about me <RightArrow />
         </a>
       </span>
-      <div style={{ display: "flex", flexDirection: "row" }}>
+      <div className="works-index-container" style={{ display: "flex", flexDirection: "row" }}>
         <div className="works-index">
           {works.slice(0, 9).map((work) => {
             return (

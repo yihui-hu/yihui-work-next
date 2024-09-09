@@ -27,8 +27,12 @@
 }
 
 @media only screen and (max-width: 1256px) {
+  .works-index-container {
+    display: none !important;
+  }
+
   .works-index {
-    display: none;
+    display: none !important;
   }
 }
 
