@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <div className="header">
-      <div style={{ display: "flex", flexDirection: "row", gap: 24 }}>
+      <div className="header-info">
         <div
           style={{
             display: "flex",
@@ -126,7 +126,7 @@ export default function Header() {
         </div>
       </div>
       <div
-        // className="works-index-container"
+        className="currently-container"
         style={{
           display: "flex",
           flexDirection: "row",

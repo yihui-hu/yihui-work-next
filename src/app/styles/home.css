@@ -235,6 +235,22 @@ but buggy on Safari :(
   }
 }
 
+.header-info {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+@media only screen and (max-width: 420px) {
+  .currently-container,
+  .header-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
 .currently-img-wrapper {
   position: relative;
   z-index: 2;
@@ -275,7 +291,8 @@ but buggy on Safari :(
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-.link, .hoverable-work {
+.link,
+.hoverable-work {
   text-decoration: none;
   transition: 0.1s ease;
   color: inherit;
