@@ -41,6 +41,8 @@ export default function Header() {
             gap: 4,
             transform: "rotate(-2deg)",
             height: "fit-content",
+            paddingInline: 8,
+            paddingBlock: 4,
           }}
         >
           <a style={{ color: "inherit", textDecoration: "none" }} href="/">
