@@ -20,8 +20,7 @@
 .header-card {
   padding: 4px;
   padding-top: 2px;
-  background-color: rgba(1, 1, 1, 0.02);
-  border-radius: 8px;
+  background-color: white;
 
   box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
     rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
@@ -301,7 +300,6 @@ but buggy on Safari :(
 }
 
 .hoverable-work:hover {
-  border-radius: 4px;
   background-color: #e9e9e9;
 }
 
