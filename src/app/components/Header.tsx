@@ -125,16 +125,28 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div style={{ display: "flex", flexDirection: "row", gap: 32 }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          <Listening />
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 6, transform: "rotate(2deg)" }}>
+      <div
+        className="works-index-container"
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          gap: 48,
+          alignItems: "center",
+          height: "fit-content",
+        }}
+      >
+        <Listening />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            transform: "rotate(4deg)",
+          }}
+        >
           <Reading />
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          <Currently />
-        </div>
+        <Currently />
       </div>
     </div>
   );
