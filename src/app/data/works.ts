@@ -23,7 +23,7 @@ const works: WorkData[] = [
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/figma_plugin.webp",
     id: "competitive design",
-    external: true,
+    external: false,
     year: "2023–",
     category: "code design",
     width: 412 / 1.5,
