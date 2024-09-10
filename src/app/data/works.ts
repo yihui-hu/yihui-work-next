@@ -50,16 +50,16 @@ const works: WorkData[] = [
     height: 944 / 3.3,
     url: "https://yihuihu.com"
   },
-  {
-    img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/personas_work_image.png",
-    id: "personas",
-    external: true,
-    year: "2024",
-    category: "design",
-    width: 412,
-    height: 249,
-    url: "https://yihui.work/personas"
-  },
+  // {
+  //   img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/personas_work_image.png",
+  //   id: "personas",
+  //   external: true,
+  //   year: "2024",
+  //   category: "design",
+  //   width: 412,
+  //   height: 249,
+  //   url: "https://yihui.work/personas"
+  // },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/henesys_tags.webp",
     id: "henesys",
@@ -140,16 +140,16 @@ const works: WorkData[] = [
     height: 1704 / 6,
     url: "/works/yhhu-xyz"
   },
-  {
-    img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/goodreads_overview.webp",
-    id: "goodreads exercise",
-    external: false,
-    year: "2021",
-    category: "design",
-    width: 412,
-    height: 257,
-    url: "/works/goodreads"
-  },
+  // {
+  //   img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/goodreads_overview.webp",
+  //   id: "goodreads exercise",
+  //   external: false,
+  //   year: "2021",
+  //   category: "design",
+  //   width: 412,
+  //   height: 257,
+  //   url: "/works/goodreads"
+  // },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/20XX_poster.webp",
     id: "20XX flora & fauna",
