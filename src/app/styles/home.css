@@ -50,6 +50,12 @@
 }
 
 @media only screen and (max-width: 1256px) {
+  .currently-container {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 796px) {
   .works-index-container {
     display: none !important;
   }
@@ -232,22 +238,6 @@ but buggy on Safari :(
   .center-circle {
     width: 12px;
     height: 12px;
-  }
-}
-
-.header-info {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-}
-
-@media only screen and (max-width: 420px) {
-  .currently-container,
-  .header-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
   }
 }
 

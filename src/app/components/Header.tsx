@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <div className="header">
-      <div className="header-info">
+      <div style={{ display: "flex", flexDirection: "row", gap: 24 }}>
         <div
           style={{
             display: "flex",
