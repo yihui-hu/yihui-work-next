@@ -34,6 +34,7 @@ export default function Header() {
     <div className="header">
       <div style={{ display: "flex", flexDirection: "row", gap: 24 }}>
         <div
+        className="header-card"
           style={{
             display: "flex",
             flexDirection: "column",
@@ -103,7 +104,7 @@ export default function Header() {
         >
           <div style={{ display: "flex", flexDirection: "row", paddingTop: 2 }}>
             <div className="works-index">
-              {works.slice(0, 8).map((work) => {
+              {works.slice(0, 9).map((work) => {
                 return (
                   <HoverableWork id={work.id} url={work.url} key={work.id}>
                     {work.id}{" "}
@@ -113,7 +114,7 @@ export default function Header() {
               })}
             </div>
             <div className="works-index">
-              {works.slice(9).map((work) => {
+              {works.slice(10).map((work) => {
                 return (
                   <HoverableWork id={work.id} url={work.url} key={work.id}>
                     {work.id}{" "}

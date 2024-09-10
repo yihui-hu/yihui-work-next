@@ -1,0 +1,164 @@
+import "../../styles/personas.css";
+
+export default function Personas() {
+  return (
+    <div>
+      <a className="home" href="/">
+        back
+      </a>
+      <div className="desktop">
+        <div className="header">
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/personas_in_games_logo.svg"
+            className="logo"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/personas_in_games_desc.svg"
+            className="description"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <div className="card-container">
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/pokemon_whole_card.png"
+            className="card"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/pokemon_card_desc.svg"
+            className="card-desc"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <div className="card-container">
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/maplestory_whole_card.png"
+            className="card"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/maplestory_card_desc.svg"
+            className="card-desc"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <div className="card-container">
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/clubpenguin_whole_card.png"
+            className="card"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/clubpenguin_card_desc.svg"
+            className="card-desc"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div className="mobile">
+        <div className="header-mobile">
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/personas_in_games_logo.svg"
+            className="logo"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/personas_in_games_desc.svg"
+            className="description"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <div className="card-container-mobile">
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/pokemon_halftones_mobile.png"
+            className="halftones-mobile"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/pokemon_card_mobile.png"
+            className="card-mobile"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/pokemon_card_desc_mobile.png"
+            className="card-desc-mobile"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <div className="card-container-mobile">
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/maplestory_halftones_mobile.png"
+            className="halftones-mobile"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/maplestory_card_mobile.png"
+            className="card-mobile"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/maplestory_card_desc_mobile.png"
+            className="card-desc-mobile"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <div className="card-container-mobile">
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/clubpenguin_halftones_mobile.png"
+            className="halftones-mobile"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/clubpenguin_card_mobile.png"
+            className="card-mobile"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="https://yihui-work.s3.us-east-2.amazonaws.com/clubpenguin_card_desc_mobile.png"
+            className="card-desc-mobile"
+            draggable="false"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}

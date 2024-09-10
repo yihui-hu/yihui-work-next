@@ -50,16 +50,26 @@ const works: WorkData[] = [
     height: 944 / 3.3,
     url: "https://yihuihu.com"
   },
-  // {
-  //   img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/personas_work_image.png",
-  //   id: "personas",
-  //   external: true,
-  //   year: "2024",
-  //   category: "design",
-  //   width: 412,
-  //   height: 249,
-  //   url: "https://yihui.work/personas"
-  // },
+  {
+    img_url: "https://product-design-portfolio.s3.us-east-2.amazonaws.com/playground.webp",
+    id: "playground",
+    external: true,
+    year: "2024",
+    category: "code design",
+    width: 1197 / 3,
+    height: 739 / 3,
+    url:  "https://playground-3t3.pages.dev"
+  },
+  {
+    img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/personas_work_image.png",
+    id: "personas",
+    external: false,
+    year: "2024",
+    category: "design",
+    width: 412,
+    height: 249,
+    url: "/works/personas"
+  },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/henesys_tags.webp",
     id: "henesys",
