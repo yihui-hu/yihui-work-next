@@ -13,12 +13,12 @@ const works: WorkData[] = [
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/cards/arena-card.webp",
     id: "are:na",
-    external: true,
+    external: false,
     year: "2023–",
     category: "code design",
     width: 1180 / 3,
     height: 800 / 3,
-    url: "https://yihuihu.com/arena"
+    url: "/works/arena"
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/figma_plugin.webp",
@@ -28,7 +28,7 @@ const works: WorkData[] = [
     category: "code design",
     width: 412 / 1.5,
     height: 583 / 1.5,
-    url: "https://yihuihu.com/figma-competitive-design-plugin"
+    url: "/works/figma-competitive-design-plugin"
   },
   {
     img_url: "https://yihui-work.s3.us-east-2.amazonaws.com/typo_super_bubble.png",
