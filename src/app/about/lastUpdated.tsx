@@ -29,7 +29,7 @@ export default function LastUpdated() {
 
   return (
     <div style={{ color: "#b9b9b9", marginTop: 24 }}>
-      Site last updated: {lastUpdated}
+      Site last updated: {lastUpdated === null ? "Loading..." : lastUpdated}
     </div>
   );
 }
